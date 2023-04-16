@@ -2,13 +2,17 @@ import subprocess
 import os
 import sys
 import platform
-import multitool
-from multitool.scripts import video_functions
-from multitool.scripts import audio_functions
-from multitool.scripts import image_functions
-from multitool.scripts import document_functions
-from multitool.scripts import other_functions
-from multitool.scripts import common
+
+# Ruta del directorio "multitool"
+multitool_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'multitool'))
+sys.path.append(multitool_path)
+
+from scripts import video_functions
+from scripts import audio_functions
+from scripts import image_functions
+from scripts import document_functions
+from scripts import other_functions
+from scripts import common_content as common
 
 # Lista de módulos que se necesitan instalar
 required_modules = ["tkinter", "subprocess", "threading", "pathlib", "ctypes", "customtkinter"]
@@ -85,10 +89,6 @@ root.geometry("+%d+%d" % (x, y))
 if platform.system() == "Windows":
     dark_title_bar()
     root.state('zoomed')
-
-# Establecer el icono de la aplicación
-favicon = PhotoImage(file="logo.png")
-root.iconphoto(True, favicon)
 
 # Fuente de Texto principal
 main_font = customtkinter.CTkFont(family='Helvetica', size=24, weight="bold")

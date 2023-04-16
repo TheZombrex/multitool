@@ -4,7 +4,7 @@ import sys
 import platform
 import ctypes
 import threading
-from multitool.scripts import common
+from . import common_content as common
 
 
 # lista de módulos que se necesitan instalar
@@ -116,23 +116,30 @@ def pdf_to_epub(root):
 def desbloquear_pdf(root):
     common.not_implemented(root)
 
+
 def comprimir_pdf(root):
     common.not_implemented(root)
+
 
 def pdf_a_power_point(root):
     common.not_implemented(root)
 
+
 def epub_a_pdf(root):
     common.not_implemented(root)
+
 
 def pdf_a_mobi(root):
     common.not_implemented(root)
 
+
 def pdf_a_texto(root):
     common.not_implemented(root)
 
+
 def epub_a_mobi(root):
     common.not_implemented(root)
+
 
 def mobi_a_epub(root):
     common.not_implemented(root)

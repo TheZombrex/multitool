@@ -4,8 +4,7 @@ import sys
 import platform
 import ctypes
 import threading
-from multitool.scripts import common
-
+from . import common_content as common
 
 # lista de módulos que se necesitan instalar
 required_modules = ["pytube", "gofile", "pyperclip", "re", "customtkinter"]
@@ -221,11 +220,6 @@ def compartir_archivo(root):
     OptionsWindow(root)
 
 
-def mostrar_ventana_principal(self):
-    # Mostrar la ventana principal
-    root.deiconify()
-
-
 def store_files(file):
     cur_server = go.getServer()
     url = go.uploadFile(file)
@@ -234,6 +228,7 @@ def store_files(file):
 
 def traducir_texto(root):
     common.not_implemented(root)
+
 
 def descargar_video_twitter(root):
     common.not_implemented(root)

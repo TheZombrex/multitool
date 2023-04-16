@@ -2,7 +2,7 @@ import subprocess
 import os
 import sys
 import platform
-from multitool.scripts import common
+from . import common_content as common
 
 # lista de módulos que se necesitan instalar
 required_modules = ["Pillow"]
